@@ -4,6 +4,7 @@ name VARCHAR(255),
 price DECIMAL (8,2),
 description VARCHAR(255),
 stock INT,
+product_group INT,
 PRIMARY KEY (product_id));
 
 
@@ -30,4 +31,18 @@ admin_id INT AUTO_INCREMENT,
 email VARCHAR(50),
 password VARCHAR(32),
 PRIMARY KEY (admin_id)
+);
+
+CREATE TABLE orders(
+order_id INT AUTO_INCREMENT,
+user_id INT,
+PRIMARY KEY (order_id),
+FOREIGN KEY (user_id) REFERENCES users (user_id)
+);
+
+CREATE TABLE product_order(
+order_id INT,
+product_id INT,
+FOREIGN KEY (order_id) REFERENCES orders (order_id),
+FOREIGN KEY (product_id) REFERENCES products (product_id)
 );

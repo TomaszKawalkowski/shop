@@ -1,6 +1,7 @@
 <?php
 
     require __DIR__.'/vendor/autoload.php';
+    include('config/db.php');
     $db = new mysqli('$DB_HOST','$DB_USER','$DB_PASSWORD','$DB_NAME','$DB_PORT');
 
     if ($db->connect_error){
