@@ -11,8 +11,6 @@
         $db->set_charset('UTF-8');  //kodowanie na połączeniu z MySQL
     }
 
-    $routing = new AltoRouter();
-    include('routing.php');
 
 ?>
 
