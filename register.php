@@ -1,5 +1,5 @@
 <?php
-require_once('src/user.php');
+
 require_once('src/connection.php');
 
 session_start();
@@ -44,8 +44,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 require_once('meta.html');
+require_once('menu.php');
 ?>
-
 
 <div class="container">
     <div class="odstep" style="height: 30px;"></div>
@@ -58,7 +58,7 @@ require_once('meta.html');
     </div>
 
 
-    <form action="register.php" method="post" class="anime">
+    <form action="register.php" method="post" >
         <div class="row">
             <div class="col-md-4"></div>
             <div class="col-md-4 ">
@@ -97,12 +97,12 @@ require_once('meta.html');
 
                         </label>
                         <input class="form-control" type="text" name="first_name" id="first_register_name"
-                               placeholder="Nick"
+                               placeholder="Podaj imię"
                                value="<?Php echo $first_name ? $first_name : '' ?>">
 
                         <div class="odstep" style="height: 10px;"></div>
                         <input class="form-control" type="text" name="last_name" id="last_register_name"
-                               placeholder="Nick"
+                               placeholder="Podaj nazwisko"
                                value="<?Php echo $last_name ? $last_name : '' ?>">
 
                         <div class="odstep" style="height: 10px;"></div>
@@ -139,7 +139,7 @@ require_once('meta.html');
             <div class="col-md-4"></div>
     </form>
 </div>
-<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+
+<?Php
+require_once('footer.html');
+?>
