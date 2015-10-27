@@ -19,8 +19,8 @@ require_once('header2.php');
 require_once('main_body.html');
 
 
-if ($match){
+/*if ($match){
     require $match['target'];
-}
+}*/
 require_once('footer.html');
 ?>

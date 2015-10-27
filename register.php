@@ -1,8 +1,13 @@
 <?php
 
 require_once('src/connection.php');
+$first_name = 0;
+$last_name = 0;
+$email = 0;
+$address = 0;
+$password = 0;
+$password2 = 0;
 
-session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['first_name']) && strlen(trim($_POST['last_name']))) {
         $first_name = trim($_POST['first_name']);
@@ -58,7 +63,7 @@ require_once('menu.php');
     </div>
 
 
-    <form action="register.php" method="post" >
+    <form action="register.php" method="post">
         <div class="row">
             <div class="col-md-4"></div>
             <div class="col-md-4 ">
